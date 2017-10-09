@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+Space Themed JS Hangman game 
+
+1) Use key events to listen for the letters that your players will type.
+	Words to use 
+	-Universe
+	-Planet 
+	-Solar System 
+
+2) Display the following on the page:
+Press any key to get started!
+
+3) Wins: (# of times user guessed the word correctly).
+
+4) If the word is madonna, display it like this when the game starts: _ _ _ _ _ _ _.
+
+5)As the user guesses the correct letters, 
+reveal them: m a d o _  _ a.
+
+Number of Guesses Remaining: (# of guesses remaining for the user).
+
+Letters Already Guessed: (Letters the user has guessed, displayed like L Z Y H).
+
+After the user wins/loses the game should automatically choose another word and make the user play it.
+-->
+<html>
+
+<head>
+    <title>Galaxy Hangman</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Nunito|Oxygen" rel="stylesheet">
+</head>
+
+<body>
+	<div class="headerPic">
+		<img src="http://www.galaxyradio.es/wp-content/uploads/2016/09/Galaxy-Background.jpg" alt="Galaxy">
+	</div>
+    <div id="instructions">
+        <h1>Select Your Difficulty!</h1>
+    </div>
+    <button onclick="reappear(easy)">
+        Easy
+    </button>
+    <button onclick="reappear(medium)">
+        Medium
+    </button>
+    <button onclick="reappear(hard)">
+        Hard
+    </button>
+    <div id="game">
+        <div id="easy">
+            <p>
+                A celestial body moving in an elliptical orbit around a star.
+            </p>
+            <p>
+                <span id="easy1">_</span> <span id="easy2">_</span> <span id="easy3">_</span> <span id="easy4">_</span> <span id="easy5">_</span> <span id="easy6">_</span>
+            </p>
+            <p class="pressBegin">
+                Press any key to Begin!
+            </p>
+            <div>
+                <p>
+                    Guesses Left
+                </p>
+                <p id="guessesEasy">
+                </p>
+            </div>
+        </div>
+        <div id="medium">
+            <p>
+                All existing matter and space considered as a whole; the cosmos.
+            </p>
+            <p>
+                <span id="medium1">_</span> <span id="medium2">_</span> <span id="medium3">_</span> <span id="medium4">_</span> <span id="medium5">_</span> <span id="medium6">_</span> <span id="medium7">_</span> <span id="medium8">_</span>
+            </p>
+            <p class="pressBegin">
+                Press any key to Begin!
+            </p>
+            <div>
+                <p>
+                    Guesses Left
+                </p>
+                <p id="guessesMed">
+                </p>
+            </div>
+        </div>
+        <div id="hard">
+            <p>
+                The collection of eight planets and their moons in orbit around the sun.
+            </p>
+            <p>
+                <span id="hard1">_</span> <span id="hard2">_</span> <span id="hard3">_</span> <span id="hard4">_</span> <span id="hard5">_</span> <span id="hard6">_</span> <span id="hard7">_</span> <span id="hard8">_</span> <span id="hard9">_</span> <span id="hard10">_</span> <span id="hard11">_</span>
+            </p>
+            <p class="pressBegin">
+                Press any key to Begin!
+            </p>
+            <div>
+                <p>
+                    Guesses Left
+                </p>
+                <p id="guessesHard">
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
